@@ -27,13 +27,13 @@ def verificar_alertas(lista):
                     if sensores[j]['nombre'] == 'Temperatura':
                          if sensores[j]['lectura'] > LIMITE_TEMP:
                               SENSORES_CON_ALERTA += 1
-                              print("ALERTA: Temperatura en 46.2 C — supera el límite de 45.0 C ")
+                              print(f"ALERTA: Temperatura en {sensores[j]['lectura']} C — supera el límite de {LIMITE_TEMP}C ")
           if lista[i] == 'Voltaje':
                for j in range(len(sensores)):
                     if sensores[j]['nombre'] == 'Voltaje':
                          if sensores[j]['lectura'] < LIMITE_VOLT:
                               SENSORES_CON_ALERTA += 1
-                              print("ALERTA: Voltaje en 7.55 V — por debajo del mínimo de 7.60 V")
+                              print(f"ALERTA: Voltaje en {sensores[j]['lectura']} V — por debajo del mínimo de {LIMITE_VOLT} V")
                                 
           
 def calcular_estadisticas(lista):
